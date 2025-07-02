@@ -6,7 +6,7 @@ Este proyecto demuestra cómo crear un formulario multi-paso elegante y funciona
 
 <img src="https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/refs/heads/master/formulario-multipasos-Multi-Step-con-solo-html-y-javascript.png" alt="Vista previa del formulario multi-paso">
 
-<img src="https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/refs/heads/master/formulario-multi-pasos-Multi-Step-html-y-javascript.png" width="600" alt="Captura de pantalla del formulario">
+<img src="https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/refs/heads/master/formulario-multi-pasos-Multi-Step-html-y-javascript.png" alt="Captura de pantalla del formulario">
 
 ## ✨ Características
 
