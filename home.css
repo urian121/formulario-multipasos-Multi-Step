@@ -1,0 +1,23 @@
+body {
+  background: #fff;
+  padding-bottom: 80px; /* espacio para el footer fijo */
+}
+.step-content {
+  display: none;
+}
+.step-content.active {
+  display: block;
+}
+.form-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #dee2e6;
+  z-index: 999;
+  padding: 0;
+}
+.progress {
+  height: 4px;
+}

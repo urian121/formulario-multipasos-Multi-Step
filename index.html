@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario multipasos (Multi-Step)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<div class="container py-5">
+  <form id="multiStepForm">
+    <!-- Step 1 -->
+    <div class="step-content active">
+      <h3>Ubicación</h3>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label>País *</label>
+          <select class="form-select">
+            <option>Argentina</option>
+            <option>Chile</option>
+            <option>Perú</option>
+            <option>Colombia</option>
+            <option>Ecuador</option>
+            <option>Venezuela</option>
+            <option>México</option>
+            <option>Costa Rica</option>
+            <option>Panamá</option>
+          </select>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label>Ciudad *</label>
+          <select class="form-select">
+            <option>Buenos Aires</option>
+            <option>Santiago</option>
+            <option>Lima</option>
+            <option>Bogotá</option>
+            <option>Quito</option>
+            <option>Caracas</option>
+            <option>México D.F.</option>
+            <option>San José</option>
+          </select>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label>Código postal *</label>
+          <input type="text" class="form-control" value="11237">
+        </div>
+        <div class="col-12 mb-3">
+          <label>Dirección *</label>
+          <input type="text" class="form-control" value="929 Hart Street">
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step-content">
+      <h3>Información de contacto</h3>
+      <div class="mb-3">
+        <label>Email *</label>
+        <input type="email" class="form-control" placeholder="email@example.com">
+      </div>
+      <div class="mb-3">
+        <label>Teléfono *</label>
+        <input type="tel" class="form-control" placeholder="+1 555 555 5555">
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step-content">
+      <h3>Revisar y enviar</h3>
+      <p>Revisa tu información y haz clic en enviar.</p>
+    </div>
+  </form>
+</div>
+
+
+<!-- Footer with Progress & Navigation -->
+<div class="form-footer">
+  <!-- Progress bar on top -->
+  <div class="progress">
+    <div class="progress-bar bg-primary" role="progressbar" style="width: 33%;"></div>
+  </div>
+  <!-- Buttons below -->
+  <div class="d-flex justify-content-between align-items-center p-3">
+    <button type="button" class="btn btn-outline-secondary" id="prevBtn">← Atrás</button>
+    <button type="button" class="btn btn-primary" id="nextBtn">Siguiente →</button>
+  </div>
+</div>
+
+<script>
+  const steps = document.querySelectorAll('.step-content');
+  const progressBar = document.querySelector('.progress-bar');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  let currentStep = 0;
+
+  function updateForm() {
+    steps.forEach((step, index) => {
+      step.classList.toggle('active', index === currentStep);
+    });
+    progressBar.style.width = `${((currentStep + 1) / steps.length) * 100}%`;
+    prevBtn.disabled = currentStep === 0;
+    nextBtn.textContent = currentStep === steps.length - 1 ? 'Enviar formulario →' : 'Siguiente →';
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (currentStep < steps.length - 1) {
+      currentStep++;
+      updateForm();
+    } else {
+      alert('Formulario enviado!');
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (currentStep > 0) {
+      currentStep--;
+      updateForm();
+    }
+  });
+
+  updateForm();
+</script>
+
+</body>
+</html>
