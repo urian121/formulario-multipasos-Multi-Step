@@ -1,0 +1,41 @@
+body {
+    background: #f8f9fa;
+}
+
+.step-item.active {
+    color: #6366f1;
+    font-weight: 600;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.step-item i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.step-content {
+    display: none;
+    position: relative;
+    min-height: 400px;
+    padding-bottom: 80px;
+}
+
+.step-content.active {
+    display: block;
+}
+
+.step-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px 0;
+    border-top: 1px solid #dee2e6;
+}

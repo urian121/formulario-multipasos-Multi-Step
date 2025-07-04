@@ -17,36 +17,6 @@ Este proyecto demuestra cómo crear un formulario multi-paso elegante y funciona
 - **Navegación flexible**: Puedes saltar entre pasos haciendo clic en el sidebar
 - **Estilo moderno**: Utiliza Bootstrap 5 para un diseño profesional
 
-## 🚀 Cómo funciona
-
-### Estructura Simple
-
-```html
-<!-- Sidebar con pasos -->
-<div class="step-item active" data-step="0">
-  <i class="bi bi-box-seam"></i>
-  <span>Detalles del Producto</span>
-</div>
-
-<!-- Contenido del paso -->
-<div class="step-content active">
-  <!-- Campos del formulario -->
-  <div class="step-buttons">
-    <!-- Botones de navegación -->
-  </div>
-</div>
-```
-
-
-### JavaScript Básico
-
-```javascript
-function updateSteps() {
-  steps.forEach((step, index) => {
-    step.classList.toggle('active', index === currentStep);
-  });
-}
-```
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -56,21 +26,6 @@ function updateSteps() {
 - **Bootstrap 5**: Framework CSS para diseño
 - **Bootstrap Icons**: Iconografía moderna
 
-## 📁 Archivos del Proyecto
-
-- `example-02.html` - Formulario completo multi-paso
-- `README.md` - Este archivo de documentación
-
-## 🎯 Casos de Uso
-
-Este tipo de formulario es perfecto para:
-
-- **Registros de usuarios**
-- **Configuraciones de productos**
-- **Procesos de checkout**
-- **Wizards de configuración**
-- **Encuestas largas**
-- **Formularios de contacto complejos**
 
 ## 💡 Ventajas de esta Implementación
 
@@ -81,3 +36,11 @@ Este tipo de formulario es perfecto para:
 5. **SEO-friendly**: HTML semántico
 6. **Mantenible**: Código simple y legible
 
+### 🙌 Expresiones de Gratitud
+
+- Cuéntale a otros sobre este proyecto 📢  
+- Invítame una cerveza 🍺 o un café ☕  
+- [PayPal](mailto:iamdeveloper86@gmail.com) → iamdeveloper86@gmail.com  
+- Agradece públicamente 🤓 y no olvides dejar tu 🌟 en GitHub... dicen que trae buena suerte 🍀
+
+## 👍 ¡No olvides SUSCRIBIRTE!
